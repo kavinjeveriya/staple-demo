@@ -98,8 +98,7 @@ spec:
                           --namespace ${KUBE_NAMESPACE} --create-namespace \
                           --values staple-demo-secrets-values.yaml \
                           --values ./staple-demo/values.yaml \
-                          --set image.tag=${IMAGE_TAG.split(':')[1]} \
-                          --wait
+                          --set image.tag=${IMAGE_TAG.split(':')[1]} 
                     """
                     }
                 }
