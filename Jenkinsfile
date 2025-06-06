@@ -97,7 +97,7 @@ spec:
                           helm upgrade --install ${RELEASE_NAME} ./staple-demo/ \
                           --namespace ${KUBE_NAMESPACE} --create-namespace \
                           --values staple-demo-secrets-values.yaml \
-                          --values ./helm/staple-demo//values.yaml \
+                          --values ./staple-demo/values.yaml \
                           --set image.tag=${IMAGE_TAG.split(':')[1]} \
                           --wait
                     """
