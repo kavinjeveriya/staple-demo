@@ -92,9 +92,11 @@ spec:
                 container('helm') {
                     dir('helm') {
                         sh """
-                          helm upgrade --install ${RELEASE_NAME} ./helm/staple-demo/ \
+                          pwd
+                          ls -la
+                          helm upgrade --install ${RELEASE_NAME} ./staple-demo/ \
                           --namespace ${KUBE_NAMESPACE} --create-namespace \
-                          --values ./helm/staple-demo-secrets-values.yaml \
+                          --values staple-demo-secrets-values.yaml \
                           --values ./helm/staple-demo//values.yaml \
                           --set image.tag=${IMAGE_TAG.split(':')[1]} \
                           --wait
